@@ -80,6 +80,7 @@ class AppPlugin : Plugin<Project> {
                 Dependencies.LIFECYCLE_RUNTIME_KTX,
                 Dependencies.COROUTINES_CORE,
                 Dependencies.COROUTINES_ANDROID,
+                *Dependencies.NAVIGATION_DEPS,
                 *Dependencies.COMPOSE_DEPS
             )
             testImplementations(*Dependencies.TEST_DEPS)

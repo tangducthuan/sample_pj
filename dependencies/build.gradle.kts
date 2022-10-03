@@ -33,6 +33,7 @@ val slidingpanelayout = "1.2.0"
 val timber = "5.0.1"
 val viewpager2 = "1.0.0"
 val compose = "1.2.1"
+val navigation = "2.5.2"
 
 dependencies {
     constraints {
@@ -75,13 +76,17 @@ dependencies {
         api("${Dependencies.SLIDING_PANE_LAYOUT}:$slidingpanelayout")
         api("${Dependencies.TIMBER}:$timber")
         api("${Dependencies.VIEWPAGER2}:$viewpager2")
-        api("${Dependencies.COMPOSE_UI}:$compose")
         api("${Dependencies.COMPOSE_ACTIVITY}:$activity")
+        api("${Dependencies.COMPOSE_UI}:$compose")
         api("${Dependencies.COMPOSE_MATERIAL}:$compose")
         api("${Dependencies.COMPOSE_UI_TOOLING_PREVIEW}:$compose")
         api("${Dependencies.COMPOSE_UI_TOOLING}:$compose")
         api("${Dependencies.COMPOSE_UI_TEST_MANIFEST}:$compose")
         api("${Dependencies.COMPOSE_UI_TEST_JUNIT}:$compose")
+        api("${Dependencies.NAVIGATION_COMPOSE}:$navigation")
+        api("${Dependencies.NAVIGATION_UI}:$navigation")
+        api("${Dependencies.NAVIGATION_KTX}:$navigation")
+        api("${Dependencies.NAVIGATION_DYNAMIC_FEATURE}:$navigation")
     }
 }
 

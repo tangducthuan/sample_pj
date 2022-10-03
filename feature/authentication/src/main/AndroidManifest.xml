@@ -10,13 +10,4 @@
         </dist:delivery>
         <dist:fusing dist:include="true" />
     </dist:module>
-    <application>
-        <activity
-            android:name=".AnotherActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-    </application>
 </manifest>
