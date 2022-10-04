@@ -54,6 +54,10 @@ object Dependencies {
     const val COMPOSE_UI_TOOLING = "androidx.compose.ui:ui-tooling"
     const val COMPOSE_UI_TEST_MANIFEST = "androidx.compose.ui:ui-test-manifest"
     const val COMPOSE_UI_TEST_JUNIT = "androidx.compose.ui:ui-test-junit4"
+    const val SPLASH_SCREEN = "androidx.core:core-splashscreen"
+    const val KTOR_HTTP = "io.ktor:ktor-client-okhttp"
+    const val KOTLIN_SERIALIZATION = "org.jetbrains.kotlinx:kotlinx-serialization-json"
+    const val KOIN_ANDROID = "io.insert-koin:koin-android"
 
     val NAVIGATION_DEPS = arrayOf(
         NAVIGATION_UI,

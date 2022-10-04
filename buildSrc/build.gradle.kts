@@ -15,6 +15,10 @@ gradlePlugin {
             id = "feature-plugin"
             implementationClass = "gradle.DynamicFeaturePlugin"
         }
+        register("android-library-plugin") {
+            id = "android-library-plugin"
+            implementationClass = "gradle.AndroidLibraryPlugin"
+        }
         register("library-plugin") {
             id = "library-plugin"
             implementationClass = "gradle.LibraryPlugin"
@@ -30,5 +34,6 @@ repositories {
 dependencies {
     compileOnly(gradleApi())
     implementation(kotlin("gradle-plugin", version = "1.7.10"))
-    implementation("com.android.tools.build:gradle:7.2.2")
+    implementation(kotlin("serialization", version = "1.7.10"))
+    implementation("com.android.tools.build:gradle:7.4.0-beta02")
 }

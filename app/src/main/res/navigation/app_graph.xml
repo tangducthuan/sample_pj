@@ -2,7 +2,13 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/app_graph"
-    app:startDestination="@id/authentication_graph">
+    app:startDestination="@id/account_graph">
+
+    <include-dynamic
+        android:id="@+id/account_graph"
+        app:graphPackage="${applicationId}.account"
+        app:graphResName="account_graph"
+        app:moduleName="account" />
 
     <include-dynamic
         android:id="@+id/authentication_graph"

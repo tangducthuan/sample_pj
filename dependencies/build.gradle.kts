@@ -34,6 +34,10 @@ val timber = "5.0.1"
 val viewpager2 = "1.0.0"
 val compose = "1.2.1"
 val navigation = "2.5.2"
+val splash_screen = "1.0.0"
+val ktor = "2.1.2"
+val kotlin_serialization = "1.4.0"
+val koin = "3.2.2"
 
 dependencies {
     constraints {
@@ -87,6 +91,10 @@ dependencies {
         api("${Dependencies.NAVIGATION_UI}:$navigation")
         api("${Dependencies.NAVIGATION_KTX}:$navigation")
         api("${Dependencies.NAVIGATION_DYNAMIC_FEATURE}:$navigation")
+        api("${Dependencies.SPLASH_SCREEN}:$splash_screen")
+        api("${Dependencies.KTOR_HTTP}:$ktor")
+        api("${Dependencies.KOTLIN_SERIALIZATION}:$kotlin_serialization")
+        api("${Dependencies.KOIN_ANDROID}:$koin")
     }
 }
 

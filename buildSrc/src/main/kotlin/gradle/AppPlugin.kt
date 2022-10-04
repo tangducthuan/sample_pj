@@ -72,14 +72,17 @@ class AppPlugin : Plugin<Project> {
         dependencies {
             implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
             implementations(
-
+                Dependencies.SPLASH_SCREEN,
+                Dependencies.KTOR_HTTP,
             )
             apis(
                 platform(project(":dependencies")),
+                project(":core"),
                 Dependencies.CORE_KTX,
                 Dependencies.LIFECYCLE_RUNTIME_KTX,
                 Dependencies.COROUTINES_CORE,
                 Dependencies.COROUTINES_ANDROID,
+                Dependencies.KOIN_ANDROID,
                 *Dependencies.NAVIGATION_DEPS,
                 *Dependencies.COMPOSE_DEPS
             )
