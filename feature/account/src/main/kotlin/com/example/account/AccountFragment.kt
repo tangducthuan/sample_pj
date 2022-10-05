@@ -1,6 +1,7 @@
 package com.example.account
 
 import android.content.Context
+import android.os.Bundle
 import android.widget.Toast
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Text
@@ -34,5 +35,9 @@ class AccountFragment : ComposeFragment() {
             }
             AccountScreen()
         }
+    }
+
+    override fun onResult(path: String, data: Bundle) {
+
     }
 }
