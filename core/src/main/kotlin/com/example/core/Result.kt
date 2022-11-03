@@ -6,6 +6,6 @@ package com.example.core
  */
 sealed class Result<out R> {
     data class Success<T>(val data: T) : Result<T>()
-    data class Error(val ex: Exception) : Result<Nothing>()
+    data class Error(val ex: Throwable) : Result<Nothing>()
     object Loading : Result<Nothing>()
 }

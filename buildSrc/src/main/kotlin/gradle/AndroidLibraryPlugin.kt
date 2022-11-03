@@ -21,7 +21,6 @@ class AndroidLibraryPlugin : Plugin<Project> {
         getByName<InternalLibraryExtension>("android") {
             compileSdk = ConfigVersion.compileSDK
             defaultConfig {
-                targetSdk = ConfigVersion.targetSDK
                 version = 1
                 testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
             }

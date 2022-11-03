@@ -2,7 +2,7 @@ package com.example.core.usecase
 
 import com.example.core.Result
 import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.withContext
 
 
 /**
@@ -10,12 +10,15 @@ import kotlinx.coroutines.flow.*
  */
 abstract class UseCase<in P, R>(private val dispatcher: CoroutineDispatcher) {
 
-    suspend operator fun invoke(p: P) = flow {
-        emit(execute(p))
+    suspend operator fun invoke(p: P): Result<R> {
+        return try {
+            withContext(dispatcher) {
+                Result.Success(execute(p))
+            }
+        } catch (e: Exception) {
+            Result.Error(e)
+        }
     }
-    .onStart { emit(Result.Loading) }
-    .catch { emit(Result.Error(Exception(it))) }
-    .flowOn(dispatcher)
 
-    protected abstract suspend fun execute(p: P): Result<R>
+    protected abstract suspend fun execute(p: P): R
 }
