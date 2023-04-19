@@ -1,6 +1,8 @@
+
 /**
  * Created by Thuan Tang on 13/09/2022.
  */
+
 object Dependencies {
     const val ACTIVITY_KTX = "androidx.activity:activity-ktx"
     const val APP_COMPAT = "androidx.appcompat:appcompat"
@@ -34,7 +36,7 @@ object Dependencies {
     const val OKHTTP = "com.squareup.okhttp3:okhttp"
     const val OKHTTP_LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor"
     const val PROFILE_INSTALLER = "androidx.profileinstaller:profileinstaller"
-    const val ROOM_COMPILER = "androidx.room:room-compiler"
+    const val ROOM_COMPILER = "androidx.room:room-compiler:2.5.0"
     const val ROOM_KTX = "androidx.room:room-ktx"
     const val ROOM_RUNTIME = "androidx.room:room-runtime"
     const val RULES = "androidx.test:rules"
@@ -47,6 +49,7 @@ object Dependencies {
     const val NAVIGATION_DYNAMIC_FEATURE = "androidx.navigation:navigation-dynamic-features-fragment"
     const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx"
     const val NAVIGATION_COMPOSE = "androidx.navigation:navigation-compose"
+    const val COMPOSE_BOM = "androidx.compose:compose-bom:2023.01.00"
     const val COMPOSE_UI = "androidx.compose.ui:ui"
     const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose"
     const val COMPOSE_MATERIAL = "androidx.compose.material:material"
@@ -58,6 +61,8 @@ object Dependencies {
     const val KTOR_HTTP = "io.ktor:ktor-client-okhttp"
     const val KOTLIN_SERIALIZATION = "org.jetbrains.kotlinx:kotlinx-serialization-json"
     const val KOIN_ANDROID = "io.insert-koin:koin-android"
+    const val KOIN_CORE_COROUTINES = "io.insert-koin:koin-core-coroutines"
+    const val KOIN_ANDROID_COMPOSE = "io.insert-koin:koin-androidx-compose"
 
     val NAVIGATION_DEPS = arrayOf(
         NAVIGATION_UI,
@@ -76,6 +81,11 @@ object Dependencies {
     val COMPOSE_DEBUG_DEPS = arrayOf(
         COMPOSE_UI_TOOLING,
         COMPOSE_UI_TEST_MANIFEST
+    )
+
+    val KOIN_DEPS = arrayOf(
+        KOIN_ANDROID_COMPOSE,
+        //KOIN_CORE_COROUTINES
     )
 
     val TEST_DEPS = arrayOf(

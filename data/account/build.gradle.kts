@@ -1,7 +1,10 @@
 plugins {
-    id("android-library-plugin")
+    id(Plugins.androidLibraryPlugin)
 }
 
 dependencies {
 
+}
+android {
+    namespace = "com.example.data.account"
 }

@@ -3,9 +3,11 @@ package gradle
 import Plugins
 import com.android.build.gradle.internal.dsl.DynamicFeatureExtension
 import extension.*
+import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
+import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 
 
 /**
@@ -14,7 +16,7 @@ import org.gradle.kotlin.dsl.dependencies
 class DynamicFeaturePlugin : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
         plugins.apply(
-            Plugins.dynamicFeature, Plugins.kotlinAndroid, Plugins.kotlinKapt
+            Plugins.dynamicFeature, Plugins.kotlinAndroid, Plugins.ksp
         )
 
         getByName<DynamicFeatureExtension>("android") {
@@ -22,6 +24,10 @@ class DynamicFeaturePlugin : Plugin<Project> {
             defaultConfig {
                 minSdk = ConfigVersion.minSDK
                 testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+            }
+            compileOptions {
+                sourceCompatibility = JavaVersion.VERSION_17
+                targetCompatibility = JavaVersion.VERSION_17
             }
             buildFeatures {
                 compose = true
@@ -37,7 +43,9 @@ class DynamicFeaturePlugin : Plugin<Project> {
                 }
             }
         }
-
+        getByName<KotlinJvmOptions>("kotlinOptions") {
+            jvmTarget = "17"
+        }
         dependencies {
             implementations(
                 project(":app"),

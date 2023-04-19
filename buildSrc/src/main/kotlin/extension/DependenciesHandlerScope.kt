@@ -32,3 +32,6 @@ fun DependencyHandlerScope.debugImplementation(dependency: Any): Dependency? =
 
 fun DependencyHandlerScope.debugImplementations(vararg dependencies: Any) =
     dependencies.forEach { debugImplementation(it) }
+
+fun DependencyHandlerScope.ksp(dependency: Any): Dependency? =
+    add("ksp", dependency)

@@ -13,4 +13,10 @@ object Plugins {
     const val kotlinParcelize = "kotlin-parcelize"
     const val kotlinSerialization = "kotlinx-serialization"
     const val kotlinKapt = "kotlin-kapt"
+    const val ksp = "com.google.devtools.ksp"
+
+    const val appPlugin = "app-plugin"
+    const val libraryPlugin = "library-plugin"
+    const val dynamicFeaturePlugin = "feature-plugin"
+    const val androidLibraryPlugin = "android-library-plugin"
 }

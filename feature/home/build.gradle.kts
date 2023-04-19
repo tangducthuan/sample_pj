@@ -1,7 +1,10 @@
 plugins {
-    id("feature-plugin")
+    id(Plugins.dynamicFeaturePlugin)
 }
 
 dependencies {
 
+}
+android {
+    namespace = "com.example.home"
 }

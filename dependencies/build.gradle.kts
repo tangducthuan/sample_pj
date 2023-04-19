@@ -1,3 +1,4 @@
+
 plugins {
     `java-platform`
     `maven-publish`
@@ -26,18 +27,18 @@ val material = "1.6.1"
 val mockito = "4.8.0"
 val okhttp = "4.10.0"
 val profileInstaller = "1.2.0"
-val room = "2.4.3"
+val room = "2.5.0"
 val rules = "1.4.0"
 val runner = "1.4.0"
 val slidingpanelayout = "1.2.0"
 val timber = "5.0.1"
 val viewpager2 = "1.0.0"
-val compose = "1.2.1"
-val navigation = "2.5.2"
+val navigation = "2.5.3"
 val splash_screen = "1.0.0"
-val ktor = "2.1.2"
-val kotlin_serialization = "1.4.0"
-val koin = "3.2.2"
+val ktor = "2.2.4"
+val kotlin_serialization = "1.5.0"
+val koin = "3.4.0"
+val koin_compose = "3.4.4"
 
 dependencies {
     constraints {
@@ -72,7 +73,6 @@ dependencies {
         api("${Dependencies.PROFILE_INSTALLER}:$profileInstaller")
         api("${Dependencies.ROOM_KTX}:$room")
         api("${Dependencies.ROOM_RUNTIME}:$room")
-        api("${Dependencies.ROOM_COMPILER}:$room")
         api("${Dependencies.OKHTTP}:$okhttp")
         api("${Dependencies.OKHTTP_LOGGING_INTERCEPTOR}:$okhttp")
         api("${Dependencies.RULES}:$rules")
@@ -81,12 +81,6 @@ dependencies {
         api("${Dependencies.TIMBER}:$timber")
         api("${Dependencies.VIEWPAGER2}:$viewpager2")
         api("${Dependencies.COMPOSE_ACTIVITY}:$activity")
-        api("${Dependencies.COMPOSE_UI}:$compose")
-        api("${Dependencies.COMPOSE_MATERIAL}:$compose")
-        api("${Dependencies.COMPOSE_UI_TOOLING_PREVIEW}:$compose")
-        api("${Dependencies.COMPOSE_UI_TOOLING}:$compose")
-        api("${Dependencies.COMPOSE_UI_TEST_MANIFEST}:$compose")
-        api("${Dependencies.COMPOSE_UI_TEST_JUNIT}:$compose")
         api("${Dependencies.NAVIGATION_COMPOSE}:$navigation")
         api("${Dependencies.NAVIGATION_UI}:$navigation")
         api("${Dependencies.NAVIGATION_KTX}:$navigation")
@@ -95,6 +89,8 @@ dependencies {
         api("${Dependencies.KTOR_HTTP}:$ktor")
         api("${Dependencies.KOTLIN_SERIALIZATION}:$kotlin_serialization")
         api("${Dependencies.KOIN_ANDROID}:$koin")
+        api("${Dependencies.KOIN_CORE_COROUTINES}:$koin")
+        api("${Dependencies.KOIN_ANDROID_COMPOSE}:$koin_compose")
     }
 }
 

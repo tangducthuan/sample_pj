@@ -1,5 +1,5 @@
 plugins {
-    id("library-plugin")
+    id(Plugins.libraryPlugin)
 }
 
 dependencies {

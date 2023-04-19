@@ -5,7 +5,7 @@ import com.example.data.account.di.dataAccountRepoModule
 import com.example.data.account.di.dataAccountUseCaseModule
 import com.example.myapplication.di.ktorModule
 import org.koin.androidx.viewmodel.dsl.viewModel
-import org.koin.core.context.loadKoinModules
+import org.koin.core.context.GlobalContext.loadKoinModules
 import org.koin.dsl.module
 
 

@@ -1,5 +1,5 @@
 plugins {
-    id("app-plugin")
+    id(Plugins.appPlugin)
 }
 
 android {
@@ -8,8 +8,8 @@ android {
         ":feature:authentication",
         ":feature:home"
     )
+    namespace = "com.example.myapplication"
 }
 
 dependencies {
-    implementation(project(":core"))
 }

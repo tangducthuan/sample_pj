@@ -1,7 +1,11 @@
 package com.example.myapplication.di
 
 import io.ktor.client.*
+import io.ktor.client.call.*
 import io.ktor.client.engine.okhttp.*
+import io.ktor.client.plugins.*
+import io.ktor.client.request.*
+import io.ktor.http.*
 import kotlinx.coroutines.Dispatchers
 import org.koin.dsl.module
 
@@ -10,7 +14,28 @@ import org.koin.dsl.module
  * Created by Thuan Tang on 04/10/2022.
  */
 val ktorModule = module {
-    single { HttpClient(OkHttp) }
+    single {
+        HttpClient(OkHttp) {
+            install(HttpRequestRetry) {
+                maxRetries = 1
+            }
+            defaultRequest {
+                url {
+                    protocol = URLProtocol.HTTPS
+                    host = "abc.com"
+                }
+                headers {
+                    set("token", "token")
+                    set("language", "en")
+                }
+            }
+        }.apply {
+            plugin(HttpSend).intercept { request ->
+                execute(request)
+                //TODO show log
+            }
+        }
+    }
 }
 
 val dispatcherModule = module {
