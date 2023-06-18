@@ -3,6 +3,7 @@ package gradle
 import Plugins
 import com.android.build.gradle.internal.dsl.DynamicFeatureExtension
 import extension.*
+import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
@@ -22,6 +23,10 @@ class DynamicFeaturePlugin : Plugin<Project> {
             defaultConfig {
                 minSdk = ConfigVersion.minSDK
                 testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+            }
+            compileOptions {
+                sourceCompatibility = JavaVersion.VERSION_17
+                targetCompatibility = JavaVersion.VERSION_17
             }
             buildFeatures {
                 compose = true

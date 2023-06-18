@@ -11,9 +11,9 @@ import kotlinx.coroutines.flow.*
 abstract class FlowUseCase<in P, R>(private val dispatcher: CoroutineDispatcher) {
 
     suspend operator fun invoke(p: P) = execute(p)
-    .onStart { emit(Result.Loading) }
-    .catch { emit(Result.Error(Exception(it))) }
-    .flowOn(dispatcher)
+        .onStart { emit(Result.Loading) }
+        .catch { emit(Result.Error(Exception(it))) }
+        .flowOn(dispatcher)
 
     protected abstract suspend fun execute(p: P): Flow<Result<R>>
 }
