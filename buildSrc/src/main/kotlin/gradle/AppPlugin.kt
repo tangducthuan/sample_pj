@@ -69,7 +69,7 @@ class AppPlugin : Plugin<Project> {
             }
         }
         getByName<KotlinJvmOptions>("kotlinOptions") {
-            jvmTarget = "17"
+            jvmTarget = JavaVersion.VERSION_17.toString()
         }
         dependencies {
             implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))

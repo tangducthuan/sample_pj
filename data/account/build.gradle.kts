@@ -2,6 +2,10 @@ plugins {
     id(Plugins.androidLibraryPlugin)
 }
 
+android {
+    namespace = "com.example.account"
+}
+
 dependencies {
 
 }

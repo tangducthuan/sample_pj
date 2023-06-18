@@ -33,7 +33,7 @@ repositories {
 
 dependencies {
     compileOnly(gradleApi())
-    implementation(kotlin("gradle-plugin", version = "1.8.20"))
+    implementation(kotlin("gradle-plugin", version = "1.8.21"))
     implementation(kotlin("serialization", version = "1.7.10"))
-    implementation("com.android.tools.build:gradle:8.0.0")
+    implementation("com.android.tools.build:gradle:8.0.2")
 }
