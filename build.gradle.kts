@@ -6,5 +6,5 @@ tasks.register("clean", Delete::class) {
 }
 
 plugins {
-    id("com.google.devtools.ksp") version("1.8.20-1.0.11")
+    id("com.google.devtools.ksp") version("1.9.10-1.0.13")
 }

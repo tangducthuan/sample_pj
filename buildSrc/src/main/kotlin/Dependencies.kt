@@ -45,11 +45,7 @@ object Dependencies {
     const val TIMBER = "com.jakewharton.timber:timber"
     const val VIEWPAGER2 = "androidx.viewpager2:viewpager2"
     const val ESPRESSO_CORE = "androidx.test.espresso:espresso-core"
-    const val NAVIGATION_KTX = "androidx.navigation:navigation-fragment-ktx"
-    const val NAVIGATION_DYNAMIC_FEATURE = "androidx.navigation:navigation-dynamic-features-fragment"
-    const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx"
-    const val NAVIGATION_COMPOSE = "androidx.navigation:navigation-compose"
-    const val COMPOSE_BOM = "androidx.compose:compose-bom:2023.01.00"
+    const val COMPOSE_BOM = "androidx.compose:compose-bom:2023.10.00"
     const val COMPOSE_UI = "androidx.compose.ui:ui"
     const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose"
     const val COMPOSE_MATERIAL = "androidx.compose.material:material"
@@ -64,18 +60,11 @@ object Dependencies {
     const val KOIN_CORE_COROUTINES = "io.insert-koin:koin-core-coroutines"
     const val KOIN_ANDROID_COMPOSE = "io.insert-koin:koin-androidx-compose"
 
-    val NAVIGATION_DEPS = arrayOf(
-        NAVIGATION_UI,
-        NAVIGATION_KTX,
-        NAVIGATION_DYNAMIC_FEATURE
-    )
-
     val COMPOSE_DEPS = arrayOf(
         COMPOSE_UI,
         COMPOSE_ACTIVITY,
         COMPOSE_MATERIAL,
-        COMPOSE_UI_TOOLING_PREVIEW,
-        NAVIGATION_COMPOSE
+        COMPOSE_UI_TOOLING_PREVIEW
     )
 
     val COMPOSE_DEBUG_DEPS = arrayOf(

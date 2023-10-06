@@ -42,7 +42,7 @@ class AppPlugin : Plugin<Project> {
             composeOptions {
                 kotlinCompilerExtensionVersion = ConfigVersion.kotlinCompilerExtensionVersion
             }
-            packagingOptions {
+            packaging {
                 resources {
                     excludes += setOf(
                         "/META-INF/{AL2.0,LGPL2.1}"
@@ -51,8 +51,8 @@ class AppPlugin : Plugin<Project> {
             }
             buildTypes {
                 getByName("debug") {
-                    isMinifyEnabled = true
-                    isShrinkResources = true
+                    isMinifyEnabled = false
+                    isShrinkResources = false
                     proguardFiles(
                         getDefaultProguardFile("proguard-android-optimize.txt"),
                         "proguard-rules.pro"
@@ -85,7 +85,7 @@ class AppPlugin : Plugin<Project> {
                 Dependencies.LIFECYCLE_RUNTIME_KTX,
                 Dependencies.COROUTINES_CORE,
                 Dependencies.COROUTINES_ANDROID,
-                *Dependencies.NAVIGATION_DEPS,
+                Dependencies.CONSTRAINT_LAYOUT,
                 *Dependencies.COMPOSE_DEPS,
                 *Dependencies.KOIN_DEPS
             )

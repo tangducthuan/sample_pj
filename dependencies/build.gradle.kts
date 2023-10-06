@@ -34,7 +34,6 @@ val slidingpanelayout = "1.2.0"
 val timber = "5.0.1"
 val viewpager2 = "1.0.0"
 val compose = "1.4.3"
-val navigation = "2.5.3"
 val splash_screen = "1.0.0"
 val ktor = "2.2.4"
 val kotlin_serialization = "1.5.1"
@@ -82,10 +81,6 @@ dependencies {
         api("${Dependencies.TIMBER}:$timber")
         api("${Dependencies.VIEWPAGER2}:$viewpager2")
         api("${Dependencies.COMPOSE_ACTIVITY}:$activity")
-        api("${Dependencies.NAVIGATION_COMPOSE}:$navigation")
-        api("${Dependencies.NAVIGATION_UI}:$navigation")
-        api("${Dependencies.NAVIGATION_KTX}:$navigation")
-        api("${Dependencies.NAVIGATION_DYNAMIC_FEATURE}:$navigation")
         api("${Dependencies.SPLASH_SCREEN}:$splash_screen")
         api("${Dependencies.KTOR_HTTP}:$ktor")
         api("${Dependencies.KOTLIN_SERIALIZATION}:$kotlin_serialization")

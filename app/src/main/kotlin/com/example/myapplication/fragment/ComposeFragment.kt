@@ -8,10 +8,6 @@ import android.view.ViewGroup
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.navigation.NavController
-import com.example.myapplication.MainActivity
 
 
 /**
@@ -36,29 +32,12 @@ abstract class ComposeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        resultLiveData?.observe(viewLifecycleOwner) {
-            it ?: return@observe
-            onResult(it.first, it.second)
-        }
+
     }
 
     @Composable
     abstract fun SetContent()
 
     protected open fun onResult(path: String, data: Bundle) {}
-
-    protected val navController = (activity as? MainActivity)?.navController
-
-    protected open fun navController(block: NavController.() -> Unit) {
-        navController?.block()
-    }
-
-    protected val resultLiveData: LiveData<Pair<String, Bundle>>?
-        get() = navController?.currentBackStackEntry?.savedStateHandle?.getLiveData<Pair<String, Bundle>>(RESULT)
-
-    protected fun setResult(path: String, data: Bundle) {
-        navController?.previousBackStackEntry?.savedStateHandle?.getLiveData<Pair<String, Bundle>>(RESULT)
-            ?.postValue(path to data)
-    }
 
 }

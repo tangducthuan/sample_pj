@@ -35,7 +35,7 @@ class Test1Activity : ScopeActivity() {
         super.onCreate(savedInstanceState)
         loadKoinModules(t1module)
         val session = getKoin().createScope("Test1Activity$id", named(id))
-        scope?.linkTo(session)
+        scope.linkTo(session)
         viewModel = get()
         setContentView(R.layout.activity_test1)
 
@@ -58,7 +58,7 @@ class Test1Activity : ScopeActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        scope?.close()
+        scope.close()
         unloadKoinModules(t1module)
     }
 }

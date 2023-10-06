@@ -22,7 +22,7 @@ class Test2Activity : ScopeActivity() {
         super.onCreate(savedInstanceState)
         id = intent.getStringExtra("id") ?: ""
         val session = getKoin().getScope("Test1Activity$id")
-        scope?.linkTo(session)
+        scope.linkTo(session)
         viewModel = get()
         setContentView(R.layout.activity_test2)
 
